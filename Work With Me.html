@@ -1,28 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Research | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Work with Katie Thomas — speaking, workshops, and consulting on financial harm and young people." />
+  <title>Work with me — Katie Thomas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Research.html">Research</a>
-    <a href="Speaking & Media.html">Speaking & Media</a>
-    <a href="Work With Me.html">Work With Me</a>
-    <a href="Work With Me.html" class="active">Work With Me</a>
-</nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Katie Thomas</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research &amp; Work</a></li>
+      <li><a href="speaking.html">Speaking &amp; Media</a></li>
+      <li><a href="work-with-me.html" class="active">Work with me</a></li>
+    </ul>
+  </nav>
 
-<header>
-    <h1>Research</h1>
-</header>
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-wrapper">
 
-<section>
-    <h2>Coming soon</h2>
-    <p>This is where your research studies will go.</p>
-</section>
+    <span class="page-tag">Work with me</span>
+    <h1>Let's work together</h1>
+    <p>
+      I work with organisations, schools, and policymakers who want to do more to protect
+      young people from financial harm. Whether you need a speaker, a workshop facilitator,
+      or a research-informed perspective on your work, I'd love to hear from you.
+    </p>
+
+    <hr class="divider" />
+
+    <!-- ===================== OFFERINGS ===================== -->
+
+    <!-- Speaking -->
+    <div class="offering-card">
+      <h3>Speaking</h3>
+      <p>
+        I speak at conferences, events, and organisations,
+        youth vulnerability, and prevention. I make complex research accessible and
+        actionable for non-academic audiences.
+      </p>
+      <a href="#contact" class="btn">Invite me to speak →</a>
+    </div>
+
+    <!-- Workshops -->
+    <div class="offering-card">
+      <h3>Workshops</h3>
+      <p>
+        I design and run workshops directly with young people — in schools, youth
+        organisations, and community settings — exploring financial harm in ways that
+        are engaging, age-appropriate, and evidence-based. 
+      </p>
+      <a href="#contact" class="btn">Bring a workshop to your school or organisation →</a>
+    </div>
+
+    <!-- Consulting -->
+    <div class="offering-card">
+      <h3>Consulting &amp; advisory</h3>
+      <p>
+        I work with financial services organisations, charities, and policy teams who
+        want a research-informed perspective on young people and financial harm. This
+        might look like advising on a product, reviewing policy, or
+        supporting research design.
+      </p>
+      <a href="#contact" class="btn">Get in touch to discuss →</a>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Who I work with -->
+    <span class="section-label">Who I work with</span>
+    <div class="pill-row">
+      <span class="pill">Schools &amp; Colleges</span>
+      <span class="pill">Youth organisations</span>
+      <span class="pill">Financial services</span>
+      <span class="pill">Charities</span>
+      <span class="pill">Policy teams</span>
+      <span class="pill">Research institutions</span>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ===================== CONTACT FORM ===================== -->
+    <span class="section-label" id="contact">Get in touch</span>
+    <p>
+      Not sure if what you need fits neatly into one of the above? Drop me a message
+      anyway — I'm happy to have an exploratory conversation!
+    </p>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/maqgjyqq"
+      method="POST"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        required
+      />
+      <input
+        type="text"
+        name="organisation"
+        placeholder="Your organisation (optional)"
+      />
+      <select name="enquiry-type" required>
+        <option value="" disabled selected>What's this about?</option>
+        <option value="speaking">Speaking invitation</option>
+        <option value="workshop">Workshop booking</option>
+        <option value="consulting">Consulting enquiry</option>
+        <option value="other">Something else</option>
+      </select>
+      <textarea
+        name="message"
+        placeholder="Tell me a bit about what you have in mind…"
+        required
+      ></textarea>
+      <button type="submit" class="btn btn-primary">Send message →</button>
+    </form>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Replace with your email address -->
+    <p>© 2026 Katie Thomas &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

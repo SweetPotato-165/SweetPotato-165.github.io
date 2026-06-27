@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Research | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research and work by Katie Thomas — financial safety, young people, and financial education." />
+  <title>Research &amp; Work — Katie Thomas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Katie Thomas</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html" class="active">Research &amp; Work</a></li>
+      <li><a href="speaking.html">Speaking &amp; Media</a></li>
+      <li><a href="work-with-me.html">Work with me</a></li>
+    </ul>
+  </nav>
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-wrapper">
 
-<nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Research.html">Research</a>
-    <a href="Speaking & Media.html">Speaking & Media</a>
-    <a href="Work With Me.html">Work With Me</a>
-    <a href="Research.html" class="active">Research & Work</a>
-</nav>
+    <span class="page-tag">Research &amp; Work</span>
+    <h1>Research &amp; Work</h1>
+    <p>
+      <!-- 1–2 sentences on your overall research focus. -->
+      My work sits at the intersection of cybersecurity and psychology, with a focus on digital
+      family financial behavior and young people's financial harms. My work combines  academic
+      rigour with practical, people-centred outputs that can make a real difference.
+    </p>
 
-<header>
-    <h1>Research</h1>
-</header>
+    <hr class="divider" />
 
-<section>
-    <h2>Coming soon</h2>
-    <p>This is where your research studies will go.</p>
-</section>
+    <!-- ===================== IN PRACTICE ===================== -->
+    <span class="section-label">In practice</span>
+    <!-- Workshops -->
+    <div class="card">
+      <h3>Workshops</h3>
+      <p>
+        I've delivered challenge-based workshops in collaboration with Bath College, using these
+        sessions to bring awareness of online financial harms among young people. These workshops 
+        provide an engaging, hands-on education on financial harms while promoting creative 
+        problem-solving and presentation skills in students. 
+      </p>
+      <br />
+      <p style="font-size: 0.875rem; color: var(--colour-text-muted);">
+        Want to bring a workshop to your school or organisation?
+        <a href="work-with-me.html">See how to work with me →</a>
+      </p>
+    </div>
+
+  <!-- The Game -->
+    <div class="card-featured">
+      <h3>🎮 Education Game - Trip Hustlers</h3>
+      <img
+    src="assets/images/Logo.png"
+    alt="Trip Hustlers game logo"
+    style="width: 200px; height: auto; border-radius: 8px; margin: 0.75rem 0;"
+      <p>
+        Trip Hustlers is an online educational game for young people aged 13 to 15. 
+        Players step into the role of a secondary school student who starts an online 
+        side hustle to earn money for a school trip. Along the way, they build financial
+        and digital literacy by navigating realistic challenges, including spotting scams, 
+        evaluating online content, and making safer cybersecurity decisions.
+        [Currently being used in an ongoing research project.]
+      </p>
+    </div>
+    <!-- ===================== RESEARCH ===================== -->
+    <span class="section-label">Research</span>
+
+    <div class="card">
+      <p class="card-meta">IDC Conference · [2024]</p>
+      <h3>Investigating the balance of privacy versus security in online family banking</h3>
+      <p>
+        Digital banking for children has become much more common, but little research has
+        looked at how it affects family money management or whether these services meet
+        families' needs. This study will interview 30 teenagers (aged 13–17) and their
+        parents or guardians to understand their experiences using digital banking.
+        The findings intend to help identify how families use these services and 
+        highlight ways they could be improved.
+      </p>
+      <br />
+      <a href="https://dl.acm.org/doi/10.1145/3628516.3659858" class="btn">Read the paper →</a>
+    </div>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Replace with your email address -->
+    <p>© 2026 Katie Thomas &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

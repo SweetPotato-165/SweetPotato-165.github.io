@@ -1,28 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Research | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Speaking and media — Katie Thomas, researcher in financial safety and young people." />
+  <title>Speaking &amp; Media — Katie Thomas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Research.html">Research</a>
-    <a href="Speaking & Media.html">Speaking & Media</a>
-    <a href="Work With Me.html">Work With Me</a>
-    <a href="Speaking & Media.html" class="active">Speaking & Media</a>
-</nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Katie Thomas</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research &amp; Work</a></li>
+      <li><a href="speaking.html" class="active">Speaking &amp; Media</a></li>
+      <li><a href="work-with-me.html">Work with me</a></li>
+    </ul>
+  </nav>
 
-<header>
-    <h1>Research</h1>
-</header>
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-wrapper">
 
-<section>
-    <h2>Coming soon</h2>
-    <p>This is where your research studies will go.</p>
-</section>
+    <span class="page-tag">Speaking &amp; Media</span>
+    <h1>Speaking &amp; Media</h1>
+    <p>
+      <!-- 2–3 sentences on what you speak on and who you speak to. -->
+      I present on topics related to financial harms affecting young people, 
+      family financial-security behaviours, and design challenges in youth 
+      banking and financial services. I have spoken at academic showcases 
+      and industry events, as well as in schools and public engagement settings.
+    </p>
+
+    <img
+      src="assets/images/KT_Talk.jpg"
+      alt="Katie Thomas presenting at an event"
+      style="width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--colour-border);"
+      onerror="this.style.display='none';"
+    />
+
+    <hr class="divider" />
+
+    <!-- Topics -->
+    <span class="section-label">Topics I speak on</span>
+    <div class="pill-row">
+      <span class="pill">Financial harm &amp; young people</span>
+      <span class="pill">Family financial behaviour</span>
+      <span class="pill">Financial education</span>
+      <span class="pill">Cybersecurity &amp; privacy</span>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Past events -->
+    <span class="section-label">Past events</span>
+    <ul class="speaking-list">
+
+      <li class="speaking-item">
+        <span class="speaking-year">[2026]</span>
+        <div class="speaking-detail">
+          <h3>BBC Radio Bristol</h3>
+          <p>I joined the morning show to discuss online financial harms affecting 
+            young people and share insights from my workshops with Bath College.</p>
+        </div>
+      </li>
+
+      <li class="speaking-item">
+        <span class="speaking-year">[2026]</span>
+        <div class="speaking-detail">
+          <h3>Bath Digital Festival</h3>
+          <p>I showcased my game, Trip Hustlers, to industry attendees and ran 
+            interactive demos, allowing attendees to play the game while I shared
+             insights from my research.</p>
+        </div>
+      </li>
+
+      <li class="speaking-item">
+        <span class="speaking-year">[2025]</span>
+        <div class="speaking-detail">
+          <h3>Information Exchange on Online Safety</h3>
+          <p>A University of Bath event bringing together industry and academia
+             to address a range of online harms and their real-world impact.</p>
+        </div>
+      </li>
+
+      <li class="speaking-item">
+        <span class="speaking-year">[2025]</span>
+        <div class="speaking-detail">
+          <h3>Online Harms Panel</h3>
+          <p>I spoke on a panel at Bath Digital Festival with experts exploring 
+            online harms and what it means to grow up in the digital world.</p>
+        </div>
+      </li>
+
+    </ul>
+
+    <hr class="divider" />
+
+    <!-- Invite CTA -->
+    <span class="section-label">Invite me to speak</span>
+    <p>
+      I'm available for conferences, organisational events, school visits, and panels.
+      Get in touch with the details of your event and I'll get back to you.
+    </p>
+    <a href="work-with-me.html" class="btn btn-primary">Get in touch →</a>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Replace with your email address -->
+    <p>© 2026 Katie Thomas &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

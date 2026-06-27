@@ -1,61 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katie Thomas | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Katie Thomas — PhD researcher in financial safety and young people at the University of Bath." />
+  <title>Katie Thomas</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-bottom: 0;
+    }
 
-    <link rel="stylesheet" href="style.css">
+    .hero-text h1 {
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.0625rem;
+      max-width: 520px;
+    }
+
+    .hero-photo-home {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--colour-border);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-initials {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--colour-accent-light);
+      border: 1px solid var(--colour-accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--colour-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ── What I do ── */
+    .what-i-do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 0;
+    }
+
+    .what-card {
+      background: var(--colour-white);
+      border: 1px solid var(--colour-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .what-card .icon {
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .what-card h3 {
+      font-size: 0.9375rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .what-card p {
+      font-size: 0.875rem;
+      color: var(--colour-text-muted);
+      margin-bottom: 0;
+    }
+
+    /* ── Featured work ── */
+    .featured-link {
+      font-size: 0.875rem;
+      color: var(--colour-accent);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.75rem;
+    }
+
+    .featured-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ── CTA banner ── */
+    .cta-banner {
+      background: var(--colour-accent-light);
+      border: 1px solid var(--colour-accent-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-banner p {
+      font-size: 0.9375rem;
+      color: var(--colour-text-body);
+      max-width: 420px;
+      margin: 0 auto 1.25rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .what-i-do-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Katie Thomas</h1>
-        <p>Cybersecurity PhD Researcher | Children's Digital Financial Harms</p>
-    </header>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Katie Thomas</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research &amp; Work</a></li>
+      <li><a href="speaking.html">Speaking &amp; Media</a></li>
+      <li><a href="work-with-me.html">Work with me</a></li>
+    </ul>
+  </nav>
 
-    <!-- NAVIGATION -->
-    <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Research.html">Research</a>
-    <a href="Speaking & Media.html">Speaking & Media</a>
-    <a href="Work With Me.html">Work With Me</a>
-    <a href="index.html" class="active">Home</a>
-</nav>
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-wrapper">
 
-    <!-- HERO SECTION -->
-    <section>
-        <h2>Hello 👋</h2>
-        <p>Welcome to my personal website.</p>
-    </section>
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <img
+        class="hero-photo-home"
+        src="assets/images/KT_Photo.jpg"
+        alt="Photo of Katie Thomas"
+        onerror="this.style.display='none'; document.getElementById('hero-initials').style.display='flex';"
+      />
+      <div class="hero-initials" id="hero-initials" style="display: none;">KT</div>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About Me</h2>
+      <div class="hero-text">
+        <span class="page-tag">PhD Researcher · University of Bath</span>
+        <h1>Researching financial harm in young people and how we can prevent it.</h1>
         <p>
-            I'm a researcher building my own website
+          I'm Katie Thomas. I research how families communicate about money, what financial
+          harms young people face today, and how education and support can help.
+          My work is research-led and people-centred with real-world outcomes at its core.
         </p>
+        <div class="hero-buttons">
+          <a href="work-with-me.html" class="btn btn-primary">Work with me →</a>
+          <a href="research.html" class="btn">See my research →</a>
+        </div>
+      </div>
+
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
-    </section>
+    <hr class="divider" />
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-    </section>
+    <!-- ── WHAT I DO ── -->
+    <span class="section-label">What I do</span>
+    <div class="what-i-do-grid">
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Katie Thomas</p>
-    </footer>
+      <div class="what-card">
+        <span class="icon">🔬</span>
+        <h3>Research</h3>
+        <p>Academic research on financial harms, family financial behaviour, and 
+        youth banking design</p>
+      </div>
+
+      <div class="what-card">
+        <span class="icon">🎤</span>
+        <h3>Speaking</h3>
+        <p>Talks and panels for conferences, organisations, schools, and events.</p>
+      </div>
+
+      <div class="what-card">
+        <span class="icon">🤝</span>
+        <h3>Consulting</h3>
+        <p>Research-informed advice for financial services, charities, and policy teams.</p>
+      </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── FEATURED WORK ── -->
+    <span class="section-label">Featured work</span>
+    <div class="card-featured">
+     <!-- Workshops -->
+    <div class="card">
+      <h3>Workshops</h3>
+      <p>
+        I've delivered challenge-based workshops in collaboration with Bath College, using these
+        sessions to bring awareness of online financial harms among young people. These workshops 
+        provide an engaging, hands-on education on financial harms while promoting creative 
+        problem-solving and presentation skills in students. 
+      </p>
+      <br />
+      <p style="font-size: 0.875rem; color: var(--colour-text-muted);">
+        Want to bring a workshop to your organisation?
+        <a href="work-with-me.html">See how to work with me →</a>
+      </p>
+    </div>
+
+    <!-- Featured paper — duplicate for additional papers -->
+    <div class="card">
+       <h3>Investigating the balance of privacy versus security in online family banking</h3>
+      <p>
+        Digital banking for children has become much more common, but little research has
+        looked at how it affects family money management or whether these services meet
+        families' needs. The findings intend to help identify how families use these services
+        and highlight ways they could be improved.
+      </p>
+      <br />
+      <a href="https://dl.acm.org/doi/10.1145/3628516.3659858" class="btn">Read the paper →</a>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── CTA BANNER ── -->
+    <div class="cta-banner">
+      <h2>Let's work together</h2>
+      <p>
+        Open to speaking invitations, workshop bookings, and consulting conversations
+        about financial harm and young people.
+      </p>
+      <a href="work-with-me.html" class="btn btn-primary">Get in touch →</a>
+    </div>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Replace with your email address -->
+    <p>© 2026 Katie Thomas &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

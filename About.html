@@ -1,27 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About|Katie Thomas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Katie Thomas — Cybersecurity PhD researcher in financial safety and young people at the University of Bath." />
+  <title>About — Katie Thomas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Research.html">Research</a>
-    <a href="Speaking & Media.html">Speaking & Media</a>
-    <a href="Work With Me.html">Work With Me</a>
-</nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Katie Thomas</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="research.html">Research &amp; Work</a></li>
+      <li><a href="speaking.html">Speaking &amp; Media</a></li>
+      <li><a href="work-with-me.html">Work with me</a></li>
+    </ul>
+  </nav>
 
-<header>
-    <h1>About</h1>
-</header>
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-wrapper">
 
-<section>
-    <h2>Coming soon</h2>
-    <p>This is where your research studies will go.</p>
-</section>
+    <span class="page-tag">About</span>
+    <h1>Katie Thomas</h1>
+
+    <img
+      class="profile-photo"
+      src="assets/images/KT_Photo.jpg"
+      alt="Photo of Katie Thomas"
+      onerror="this.style.display='none'; document.getElementById('initials').style.display='flex';"
+    />
+    <div class="profile-initials" id="initials" style="display: none;">KT</div>
+
+    <p>
+      I'm a PhD researcher at the University of Bath with a background in psychology and criminology.
+    </p>
+    <p>
+        My research explores how young people experience money in a digital world, from the way
+        families talk about finances to the financial harms and risks they encounter online. 
+        I'm interested in making technology and financial systems work better for the people
+        who use them, particularly those who are most vulnerable. 
+    </p>
+    <p>
+        Taking a people-centred approach, I work towards practical, real-world resources that
+        help families, educators, and organisations better support young people.
+    </p>
+
+    <hr class="divider" />
+
+    <!-- Areas of expertise -->
+    <span class="section-label">Areas of expertise</span>
+    <div class="pill-row">
+      <span class="pill">Financial harm</span>
+      <span class="pill">Young people &amp; families</span>
+      <span class="pill">Financial education</span>
+      <span class="pill">Cybersecurity &amp; privacy</span>
+      <span class="pill">User-centred research</span>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Affiliation -->
+    <span class="section-label">Affiliation</span>
+    <div class="card">
+      <p class="card-meta">Current · PhD Researcher</p>
+      <h3>University of Bath</h3>
+      <p>School of Management</p>
+      <p>Bath Institute for Digital Security and Behaviour</p>
+      <p>The CREATE Lab</p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- CTA -->
+    <span class="section-label">Get in touch</span>
+    <p>
+      I'm open to speaking invitations, workshop bookings, and consulting conversations
+      about financial harm and young people.
+    </p>
+    <a href="work-with-me.html" class="btn btn-primary">Work with me →</a>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Replace with your email address -->
+    <p>© 2026 Katie Thomas &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
